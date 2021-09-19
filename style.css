@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+}
+.navbar{
+    /* width: 100%; */
+    background-color: grey;
+    margin: 0%;
+    padding: 2%;
+    font-size: 40px;
+    font-weight: 600;
+}
+.main{
+ align-items: center;   
+}
+.banner{
+    display: flex;
+    justify-content: center;
+    /* color: rgb(0, 255, 60); */
+    /* font-size: 70px; */
+}
+.btns{
+    display: flex;
+    justify-content: center;
+    margin: 2%;
+}
+
+#get-number , #result , #history{
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#history{
+    margin-top: 16px;
+}
+
+.banner{
+    color: #FFD23F;
+    font-size:90px;
+    font-family: sans-serif;
+}
