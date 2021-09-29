@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text Editor</title>
+        <link rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/c939d0e917.js"
+            crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body class="text-center container">
+        <main>
+            <h1 class="banner p-3 text-primary">Text Editor</h1>
+            <div class="row">
+                <div class="col">
+                    <button id="bold" onclick="makeBold(this)" type="button" class="btn btn-light">Bold</button>
+                    <button id="italic" onclick="makeItalic(this)" type="button" class="btn btn-light">Italic</button>
+                    <button id="underline" onclick="makeUnderline(this)" type="button" class="btn btn-light">Underline</button>
+                    <button id="left-align" onclick="alignText(this,'left')" type="button" class="align btn btn-light"><i
+                            class="fa fa-align-left"></i></button>
+                    <button id="center-align" onclick="alignText(this,'center')" type="button" class="align btn
+                        btn-light"><i class="fa fa-align-center"></i></button>
+                    <button id="right-align" onclick="alignText(this,'right')" type="button" class="align btn
+                        btn-light"><i class="fa fa-align-right"></i></button>
+                </div>
+            </div>
+            <hr/>
+                <div class="row editor">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="text-input">Your Document Text</label>
+                            <textarea id="text-input" class="form-control"
+                                onkeydown="updateText()"
+                                rows="3"></textarea>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <label for="text-input">Formatted Text</label>
+                        <div id="text-output" class="bg-light">
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <script src="script.js"></script>
+        </body>
+    </html>

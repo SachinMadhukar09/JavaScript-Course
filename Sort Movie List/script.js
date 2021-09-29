@@ -2,61 +2,79 @@ let movies = [
   {
     title: "Fight Club",
     rank: 10,
-    id: "tt0137532",
+    id: "01",
   },
   {
     title: "The Shawshank Redemption",
     rank: 1,
-    id: "tt0111161",
+    id: "02",
   },
   {
     title: "The Lord of the Rings",
     rank: 9,
-    id: "tt0167260",
+    id: "03",
   },
   {
     title: "The Godfather",
     rank: 2,
-    id: "tt068646",
+    id: "04",
   },
   {
     title: "The Good ,the Bad and the ugly",
     rank: 5,
-    id: "tt060196",
+    id: "05",
   },
   {
     title: "The Dark Kniight",
     rank: 6,
-    id: "tt0468569",
+    id: "06",
   },
   {
     title: "Pulp Fiction",
     rank: 4,
-    id: "tt011092",
+    id: "07",
   },
   {
     title: "Schindler's List",
     rank: 8,
-    id: "tt0108052",
+    id: "08",
   },
   {
     title: "12 Angry Man",
     rank: 7,
-    id: "tt005083",
+    id: "09",
   },
   {
     title: "The Godfather : Part II",
     rank: 3,
-    id: "tt007162",
+    id: "10",
   },
 ];
 
 window.onload = function () {
-  //   let sortedMovies  =sortMoviesByRank(movies);
-  let sortedMovies = sortMoviesByAttribute(movies, "id");
-  displayMovies(sortedMovies);
+    // let sortedMovies  =sortMoviesByRank(movies);
+  document.getElementById("id").addEventListener("click",ById)
+  document.getElementById("rank").addEventListener("click",ByRank) 
+  document.getElementById("name").addEventListener("click",ByName)
+  // let sortedMovies = sortMoviesByAttribute(movies, "name");
+  displayMovies();
   console.log(a>b)
 };
+
+function ByRank(){
+  let sortedMovies = sortMoviesByAttribute(movies, "rank");
+  displayMovies(sortedMovies);
+}
+
+function ById(){
+  let sortedMovies = sortMoviesByAttribute(movies, "id");
+  displayMovies(sortedMovies);
+}
+
+function ByName(){
+  let sortedMovies = sortMoviesByAttribute(movies, "name");
+  displayMovies(sortedMovies);
+}
 
 function displayMovies() {
   let table = "<table border='1' style='width:100%'> ";
